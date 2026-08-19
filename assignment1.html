@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <style>
+        .card {
+            width: 300px;
+            padding: 20px;
+            background-color: aquamarine;
+        }
+
+        #result {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div id="products"></div>
+
+        <button onclick="ad()">SHOP</button>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        const shop = {
+            tea: 100,
+            coffee: 500,
+            aata: 600,
+            chini: 800
+        };
+
+        const products = document.getElementById("products");
+
+        for (let x in shop) {
+            products.innerHTML += x + ": ₹" + shop[x] + "<br>";
+        }
+
+        function ad() {
+            const product = prompt("Enter your product name:");
+            const quantity = Number(prompt("Enter your quantity:"));
+            const result = document.getElementById("result");
+
+            const total = shop[product] * quantity;
+            result.textContent = "Your total amount is ₹" + total;
+        }
+    </script>
+</body>
+</html>
