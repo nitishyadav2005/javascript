@@ -10,7 +10,8 @@
         const num = [11,22,32,41,5,62,72,81,9];
         const even = num.filter((i) => (i%2 == 0));
         const square = even.map((i) => (i*i));
-        console.log("square root no is = ", square);
+        const sum = square.reduce((i, s) => (i+s));
+        console.log("sum is : ", sum);
     </script>
 </body>
 </html>
