@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function userdetails(){
+        let detail = {
+           username: "nitish67",
+           password: "123" 
+        };
+        return detail;
+    }
+        let a = prompt("Enter username");
+        let b = prompt("enter password");
+
+        function checkuser(clbk, msg){
+            const detail = clbk();
+            if(detail.username === a && detail.password === b){
+                console.log(msg);
+            }
+        }
+        checkuser(userdetails, "hello world");
+    </script>
+</body>
+</html>
